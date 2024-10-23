@@ -6,7 +6,7 @@
       <Properties>
         <Property name="resizable" type="boolean" value="false"/>
         <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[462, 347]"/>
+          <Dimension value="[741, 598]"/>
         </Property>
       </Properties>
 
@@ -14,35 +14,45 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <EmptySpace min="-2" pref="187" max="-2" attributes="0"/>
-                  <Component id="botonCerrarSesion" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace pref="57" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="302" max="-2" attributes="0"/>
                           <Component id="textoBienvenida" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="178" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="campoUsuarioLogueado" min="-2" pref="361" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="318" max="-2" attributes="0"/>
+                          <Component id="imagenUsuario" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="267" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="botonCrearUsuario" min="-2" max="-2" attributes="0"/>
+                              <Component id="textoUsuarioLogueado" min="-2" pref="169" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="289" max="-2" attributes="0"/>
+                          <Component id="botonCerrarSesion" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
+                  <EmptySpace pref="305" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
                   <Component id="textoBienvenida" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="136" max="-2" attributes="0"/>
-                  <Component id="campoUsuarioLogueado" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="imagenUsuario" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
+                  <Component id="textoUsuarioLogueado" min="-2" pref="18" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
+                  <Component id="botonCrearUsuario" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
                   <Component id="botonCerrarSesion" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="55" max="32767" attributes="0"/>
+                  <EmptySpace pref="133" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -53,11 +63,6 @@
             <Property name="text" type="java.lang.String" value="BIENVENID@"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="campoUsuarioLogueado">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="campoUsuarioLogueadoActionPerformed"/>
-          </Events>
-        </Component>
         <Component class="javax.swing.JButton" name="botonCerrarSesion">
           <Properties>
             <Property name="text" type="java.lang.String" value="Cerrar sesion"/>
@@ -65,6 +70,232 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonCerrarSesionActionPerformed"/>
           </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="textoUsuarioLogueado">
+        </Component>
+        <Component class="javax.swing.JLabel" name="imagenUsuario">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/VistaControlador/usuarioLogueado.jpg"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="botonCrearUsuario">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Crear nuevo usuario"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonCrearUsuarioActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JDialog" name="PantallaCreacionUsuario">
+      <Properties>
+        <Property name="resizable" type="boolean" value="false"/>
+        <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[656, 796]"/>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="textoInformacionNuevoUsuario" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="132" max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="117" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="textoNuevoUsuario" alignment="0" min="-2" pref="67" max="-2" attributes="0"/>
+                      <Component id="textoConfirmarContrasenia" min="-2" max="-2" attributes="0"/>
+                      <Component id="textoNuevaContrasenia" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="campoNuevoUsuario" max="32767" attributes="0"/>
+                      <Component id="campoNuevaContrasenia" max="32767" attributes="0"/>
+                      <Component id="campoConfirmarContrasenia" pref="226" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="111" max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="Separador" min="-2" pref="618" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
+                          <Component id="textoDatosOpcionales" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="112" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="textoNombreOpcional" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="textoApellidoOpcional" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="textoFechaNacimientoOpcional" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="textoCorreoOpcional" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="botonVolverUsuario" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="campoNombreOpcional" max="32767" attributes="0"/>
+                                      <Component id="campoApellidoOpcional" max="32767" attributes="0"/>
+                                      <Component id="campoFechaOpcional" max="32767" attributes="0"/>
+                                      <Component id="campoCorreoOpcional" pref="215" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="botonAgregarUsuario" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <EmptySpace pref="18" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                  <Component id="textoInformacionNuevoUsuario" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="textoNuevoUsuario" min="-2" max="-2" attributes="0"/>
+                      <Component id="campoNuevoUsuario" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="textoNuevaContrasenia" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="campoNuevaContrasenia" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="textoConfirmarContrasenia" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="campoConfirmarContrasenia" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="133" max="-2" attributes="0"/>
+                  <Component id="Separador" min="-2" pref="10" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                  <Component id="textoDatosOpcionales" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="textoNombreOpcional" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="campoNombreOpcional" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="textoApellidoOpcional" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="campoApellidoOpcional" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="textoFechaNacimientoOpcional" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="campoFechaOpcional" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="textoCorreoOpcional" min="-2" max="-2" attributes="0"/>
+                      <Component id="campoCorreoOpcional" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="botonVolverUsuario" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="botonAgregarUsuario" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="59" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="textoInformacionNuevoUsuario">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Por favor, introsuzaca la informacion nueva del usuario:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="textoNuevoUsuario">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Usuario"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="textoNuevaContrasenia">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Contrasenia"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="textoConfirmarContrasenia">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Confirmar contrasenia"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="campoNuevoUsuario">
+        </Component>
+        <Component class="javax.swing.JTextField" name="campoNuevaContrasenia">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="campoNuevaContraseniaActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JTextField" name="campoConfirmarContrasenia">
+        </Component>
+        <Component class="javax.swing.JSeparator" name="Separador">
+        </Component>
+        <Component class="javax.swing.JLabel" name="textoDatosOpcionales">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Agregar datos opcionales del usuario"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="textoNombreOpcional">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Nombre"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="textoApellidoOpcional">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Apellidos"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="textoFechaNacimientoOpcional">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Fecha de nacimiento"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="textoCorreoOpcional">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Correo electronico"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="campoNombreOpcional">
+        </Component>
+        <Component class="javax.swing.JTextField" name="campoApellidoOpcional">
+        </Component>
+        <Component class="javax.swing.JTextField" name="campoFechaOpcional">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="//"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="campoCorreoOpcional">
+        </Component>
+        <Component class="javax.swing.JButton" name="botonVolverUsuario">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Volver"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonVolverUsuarioActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="botonAgregarUsuario">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Agregar"/>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>
@@ -101,16 +332,21 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="textoUsuario" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="textoPassword" alignment="0" min="-2" pref="78" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="textoUsuario" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="textoPassword" alignment="0" min="-2" pref="78" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="campoUsuario" max="32767" attributes="0"/>
+                                  <Component id="campoPassword" pref="227" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="checkboxMostrarPassword" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="botonCerrarPrincipal" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="campoUsuario" max="32767" attributes="0"/>
-                          <Component id="campoPassword" pref="227" max="32767" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                      <Component id="checkboxMostrarPassword" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="63" max="32767" attributes="0"/>
@@ -139,7 +375,10 @@
                   <Component id="campoPassword" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="62" max="32767" attributes="0"/>
-              <Component id="botonLogear" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="botonLogear" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="botonCerrarPrincipal" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -175,8 +414,19 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Mostrar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="checkboxMostrarPasswordActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JPasswordField" name="campoPassword">
+    </Component>
+    <Component class="javax.swing.JButton" name="botonCerrarPrincipal">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Cerrar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonCerrarPrincipalActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
