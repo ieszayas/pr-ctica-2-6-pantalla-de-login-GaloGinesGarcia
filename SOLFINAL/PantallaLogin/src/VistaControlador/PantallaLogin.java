@@ -5,7 +5,11 @@
 package VistaControlador;
 
 import Modelo.BBDD;
+ HEAD
 import Modelo.Main;
+
+import Modelo.OperativasBBDD;
+ SegundaParte
 import Modelo.SingleConexion;
 import Modelo.Usuario;
 import java.sql.Connection;
@@ -13,7 +17,10 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
+ HEAD
 
+
+ SegundaParte
 /**
  *
  * @author galog
@@ -25,12 +32,20 @@ public class PantallaLogin extends javax.swing.JFrame {
      */
     public PantallaLogin() {
         initComponents();
+ HEAD
         
         setTitle("Login");
         PantallaLogueado.setTitle("Principal");
         PantallaCreacionUsuario.setTitle("Agregar nuevo usuario");
         
         
+
+
+        setTitle("Login");
+        PantallaLogueado.setTitle("Principal");
+        PantallaCreacionUsuario.setTitle("Agregar nuevo usuario");
+
+ SegundaParte
     }
 
     /**
@@ -68,6 +83,11 @@ public class PantallaLogin extends javax.swing.JFrame {
         campoCorreoOpcional = new javax.swing.JTextField();
         botonVolverUsuario = new javax.swing.JButton();
         botonAgregarUsuario = new javax.swing.JButton();
+ HEAD
+
+        textoIdUsuario = new javax.swing.JLabel();
+        campoIdUsuario = new javax.swing.JTextField();
+ SegundaParte
         textoPrincipal = new javax.swing.JLabel();
         textoUsuario = new javax.swing.JLabel();
         textoPassword = new javax.swing.JLabel();
@@ -173,11 +193,22 @@ public class PantallaLogin extends javax.swing.JFrame {
         });
 
         botonAgregarUsuario.setText("Agregar");
+ HEAD
+
+        botonAgregarUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonAgregarUsuarioActionPerformed(evt);
+            }
+        });
+
+        textoIdUsuario.setText("id usuario");
+ SegundaParte
 
         javax.swing.GroupLayout PantallaCreacionUsuarioLayout = new javax.swing.GroupLayout(PantallaCreacionUsuario.getContentPane());
         PantallaCreacionUsuario.getContentPane().setLayout(PantallaCreacionUsuarioLayout);
         PantallaCreacionUsuarioLayout.setHorizontalGroup(
             PantallaCreacionUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+ HEAD
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PantallaCreacionUsuarioLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(textoInformacionNuevoUsuario)
@@ -194,6 +225,8 @@ public class PantallaLogin extends javax.swing.JFrame {
                     .addComponent(campoNuevaContrasenia)
                     .addComponent(campoConfirmarContrasenia, javax.swing.GroupLayout.DEFAULT_SIZE, 226, Short.MAX_VALUE))
                 .addGap(111, 111, 111))
+
+ SegundaParte
             .addGroup(PantallaCreacionUsuarioLayout.createSequentialGroup()
                 .addGroup(PantallaCreacionUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PantallaCreacionUsuarioLayout.createSequentialGroup()
@@ -223,12 +256,35 @@ public class PantallaLogin extends javax.swing.JFrame {
                                 .addComponent(botonAgregarUsuario)
                                 .addGap(59, 59, 59)))))
                 .addContainerGap(18, Short.MAX_VALUE))
+ HEAD
+
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PantallaCreacionUsuarioLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(textoInformacionNuevoUsuario)
+                .addGap(132, 132, 132))
+            .addGroup(PantallaCreacionUsuarioLayout.createSequentialGroup()
+                .addGap(117, 117, 117)
+                .addGroup(PantallaCreacionUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(textoNuevoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textoConfirmarContrasenia)
+                    .addComponent(textoNuevaContrasenia)
+                    .addComponent(textoIdUsuario))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(PantallaCreacionUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(campoIdUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, 226, Short.MAX_VALUE)
+                    .addGroup(PantallaCreacionUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(campoNuevoUsuario)
+                        .addComponent(campoNuevaContrasenia)
+                        .addComponent(campoConfirmarContrasenia, javax.swing.GroupLayout.DEFAULT_SIZE, 226, Short.MAX_VALUE)))
+                .addGap(111, 111, 111))
+ SegundaParte
         );
         PantallaCreacionUsuarioLayout.setVerticalGroup(
             PantallaCreacionUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PantallaCreacionUsuarioLayout.createSequentialGroup()
                 .addGap(45, 45, 45)
                 .addComponent(textoInformacionNuevoUsuario)
+ HEAD
                 .addGap(54, 54, 54)
                 .addGroup(PantallaCreacionUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(textoNuevoUsuario)
@@ -242,6 +298,25 @@ public class PantallaLogin extends javax.swing.JFrame {
                     .addComponent(textoConfirmarContrasenia)
                     .addComponent(campoConfirmarContrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(133, 133, 133)
+
+                .addGap(74, 74, 74)
+                .addGroup(PantallaCreacionUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(textoIdUsuario)
+                    .addComponent(campoIdUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(21, 21, 21)
+                .addGroup(PantallaCreacionUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(textoNuevoUsuario)
+                    .addComponent(campoNuevoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addGroup(PantallaCreacionUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(textoNuevaContrasenia)
+                    .addComponent(campoNuevaContrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(23, 23, 23)
+                .addGroup(PantallaCreacionUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(textoConfirmarContrasenia)
+                    .addComponent(campoConfirmarContrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(86, 86, 86)
+ SegundaParte
                 .addComponent(Separador, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
                 .addComponent(textoDatosOpcionales)
@@ -353,6 +428,7 @@ public class PantallaLogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonLogearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonLogearActionPerformed
+ HEAD
         
        if(Main.recorrerUsuarios(campoUsuario.getText(), String.valueOf(campoPassword.getPassword())) == true){
            PantallaLogueado.setVisible(true);
@@ -365,6 +441,29 @@ public class PantallaLogin extends javax.swing.JFrame {
         
         
         
+
+        String nombre = campoUsuario.getText();
+        String password = String.valueOf(campoPassword.getPassword());
+        
+        Connection con = SingleConexion.getConnection();
+
+        boolean loginExitoso = OperativasBBDD.iniciarUsuario(nombre, password, con);
+
+        if (loginExitoso) {
+            PantallaLogueado.setVisible(true);
+            
+            textoUsuarioLogueado.setText("El usuario " + campoUsuario.getText() + " esta logueado");
+
+        } else {
+            JOptionPane.showMessageDialog(this, "Credenciales incorrectas. Intentelo de nuevo.");
+
+        }
+
+        campoUsuario.setText("");
+        campoPassword.setText("");
+
+
+ SegundaParte
     }//GEN-LAST:event_botonLogearActionPerformed
 
     private void botonCerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCerrarSesionActionPerformed
@@ -372,7 +471,11 @@ public class PantallaLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_botonCerrarSesionActionPerformed
 
     private void checkboxMostrarPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkboxMostrarPasswordActionPerformed
+ HEAD
         if (checkboxMostrarPassword.isSelected()){
+
+        if (checkboxMostrarPassword.isSelected()) {
+ SegundaParte
             campoPassword.setEchoChar((char) 0);
         } else {
             campoPassword.setEchoChar(('*'));
@@ -380,12 +483,20 @@ public class PantallaLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_checkboxMostrarPasswordActionPerformed
 
     private void botonCerrarPrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCerrarPrincipalActionPerformed
+ HEAD
         
         Connection con = SingleConexion.closeConnection();
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         
         
         
+
+
+        Connection con = SingleConexion.closeConnection();
+        System.exit(0);
+
+
+ SegundaParte
     }//GEN-LAST:event_botonCerrarPrincipalActionPerformed
 
     private void botonCrearUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCrearUsuarioActionPerformed
@@ -400,6 +511,19 @@ public class PantallaLogin extends javax.swing.JFrame {
         PantallaCreacionUsuario.dispose();
     }//GEN-LAST:event_botonVolverUsuarioActionPerformed
 
+ HEAD
+
+    private void botonAgregarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAgregarUsuarioActionPerformed
+        Connection con = SingleConexion.getConnection();
+        
+        
+        OperativasBBDD.crearUsuario(Integer.valueOf(campoIdUsuario.getText()), campoNuevoUsuario.getText(), campoApellidoOpcional.getText(), campoNombreOpcional.getText(), campoCorreoOpcional.getText(), campoNuevaContrasenia.getText(), con);
+        OperativasBBDD.cargarUsuarios(con);
+        
+        
+    }//GEN-LAST:event_botonAgregarUsuarioActionPerformed
+
+ SegundaParte
     /**
      * @param args the command line arguments
      */
@@ -428,6 +552,7 @@ public class PantallaLogin extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
+ HEAD
         java.awt.EventQueue.invokeLater(new Runnable() {
             
             public void run() {
@@ -437,6 +562,18 @@ public class PantallaLogin extends javax.swing.JFrame {
                 BBDD.inicializarBaseDeDatos(con);
                 Main.cargarUsuarios(con);
                 
+
+        Connection con = SingleConexion.getConnection();
+        BBDD.inicializarBaseDeDatos(con);
+        OperativasBBDD.cargarUsuarios(con);
+        
+        java.awt.EventQueue.invokeLater(new Runnable() {
+
+            public void run() {
+                new PantallaLogin().setVisible(true);
+                
+
+ SegundaParte
             }
         });
     }
@@ -455,6 +592,10 @@ public class PantallaLogin extends javax.swing.JFrame {
     private javax.swing.JTextField campoConfirmarContrasenia;
     private javax.swing.JTextField campoCorreoOpcional;
     private javax.swing.JTextField campoFechaOpcional;
+ HEAD
+
+    private javax.swing.JTextField campoIdUsuario;
+ SegundaParte
     private javax.swing.JTextField campoNombreOpcional;
     private javax.swing.JTextField campoNuevaContrasenia;
     private javax.swing.JTextField campoNuevoUsuario;
@@ -468,6 +609,10 @@ public class PantallaLogin extends javax.swing.JFrame {
     private javax.swing.JLabel textoCorreoOpcional;
     private javax.swing.JLabel textoDatosOpcionales;
     private javax.swing.JLabel textoFechaNacimientoOpcional;
+ HEAD
+
+    private javax.swing.JLabel textoIdUsuario;
+ SegundaParte
     private javax.swing.JLabel textoInformacionNuevoUsuario;
     private javax.swing.JLabel textoNombreOpcional;
     private javax.swing.JLabel textoNuevaContrasenia;

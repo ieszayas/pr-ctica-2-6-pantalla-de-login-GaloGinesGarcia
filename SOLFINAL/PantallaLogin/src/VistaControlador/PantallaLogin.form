@@ -101,6 +101,7 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
+ HEAD
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
                   <Component id="textoInformacionNuevoUsuario" min="-2" max="-2" attributes="0"/>
@@ -121,6 +122,8 @@
                   </Group>
                   <EmptySpace min="-2" pref="111" max="-2" attributes="0"/>
               </Group>
+
+ SegundaParte
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
@@ -160,6 +163,33 @@
                   </Group>
                   <EmptySpace pref="18" max="32767" attributes="0"/>
               </Group>
+ HEAD
+
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="textoInformacionNuevoUsuario" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="132" max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="117" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="textoNuevoUsuario" alignment="0" min="-2" pref="67" max="-2" attributes="0"/>
+                      <Component id="textoConfirmarContrasenia" min="-2" max="-2" attributes="0"/>
+                      <Component id="textoNuevaContrasenia" min="-2" max="-2" attributes="0"/>
+                      <Component id="textoIdUsuario" alignment="0" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="campoIdUsuario" pref="226" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="campoNuevoUsuario" max="32767" attributes="0"/>
+                          <Component id="campoNuevaContrasenia" max="32767" attributes="0"/>
+                          <Component id="campoConfirmarContrasenia" pref="226" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace min="-2" pref="111" max="-2" attributes="0"/>
+              </Group>
+ SegundaParte
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
@@ -167,6 +197,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                   <Component id="textoInformacionNuevoUsuario" min="-2" max="-2" attributes="0"/>
+ HEAD
                   <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="textoNuevoUsuario" min="-2" max="-2" attributes="0"/>
@@ -183,6 +214,29 @@
                       <Component id="campoConfirmarContrasenia" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="133" max="-2" attributes="0"/>
+
+                  <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="textoIdUsuario" min="-2" max="-2" attributes="0"/>
+                      <Component id="campoIdUsuario" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="textoNuevoUsuario" min="-2" max="-2" attributes="0"/>
+                      <Component id="campoNuevoUsuario" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="textoNuevaContrasenia" min="-2" max="-2" attributes="0"/>
+                      <Component id="campoNuevaContrasenia" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="textoConfirmarContrasenia" min="-2" max="-2" attributes="0"/>
+                      <Component id="campoConfirmarContrasenia" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="86" max="-2" attributes="0"/>
+ SegundaParte
                   <Component id="Separador" min="-2" pref="10" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                   <Component id="textoDatosOpcionales" min="-2" max="-2" attributes="0"/>
@@ -296,6 +350,19 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Agregar"/>
           </Properties>
+ HEAD
+
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonAgregarUsuarioActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="textoIdUsuario">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="id usuario"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="campoIdUsuario">
+ SegundaParte
         </Component>
       </SubComponents>
     </Container>
