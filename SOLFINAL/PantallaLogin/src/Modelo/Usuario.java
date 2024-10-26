@@ -1,22 +1,3 @@
- HEAD
-
-
-package Modelo;
-
-
-
-public class Usuario {
-    
-    private String nombre;
-    private String password;
-    
-    public Usuario(){
-        
-    }
-    
-    public Usuario(String nombre, String password){
-        this.nombre = nombre;
-
 package Modelo;
 
 public class Usuario {
@@ -40,7 +21,6 @@ public class Usuario {
         this.apellido = apellido;
         this.fechaNac = fechaNac;
         this.correoE = correoE;
- SegundaParte
         this.password = password;
     }
 
@@ -59,20 +39,6 @@ public class Usuario {
     public void setPassword(String password) {
         this.password = password;
     }
- HEAD
-
-    @Override
-    public String toString() {
-        return "Usuario{" + "nombre=" + nombre + ", password=" + password + '}';
-    }
-    
-    
-    
-    
-     
-    
-    
-
     
     public int getId() {
         return id;
@@ -113,5 +79,4 @@ public class Usuario {
 
     
 
- SegundaParte
 }
